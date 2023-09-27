@@ -14,8 +14,9 @@ class Simulation:
     acceleration_x: int
     acceleration_y: int
     length: int
+    speed: float
 
-    def __init__(self, plane, initial_position, initial_x_velocity, initial_y_velocity, acceleration_x, acceleration_y, length):
+    def __init__(self, plane, initial_position, initial_x_velocity, initial_y_velocity, acceleration_x, acceleration_y, length, speed):
         self.plane = plane
         self.initial_position = initial_position
         self.initial_x_velocity = initial_x_velocity
@@ -23,10 +24,11 @@ class Simulation:
         self.acceleration_x = acceleration_x
         self.acceleration_y = acceleration_y
         self.length = length + 1
+        self.speed = speed
 
     def start(self):
         for t in range(self.length):
-            time.sleep(1)
+            time.sleep(1 / self.speed)
 
             if os.name == "nt":
                 os.system("cls")
