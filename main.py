@@ -7,7 +7,7 @@ def main():
     plane = Plane(30, "•")
 
     Simulation(
-        plane=Plane(30, "•"),
+        plane=plane,
         initial_position=Position(plane, 0, 15),
         initial_x_velocity=4,
         initial_y_velocity=5,
