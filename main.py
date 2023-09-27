@@ -13,7 +13,8 @@ def main():
         initial_y_velocity=5,
         acceleration_x=0,
         acceleration_y=-2,
-        length=6
+        length=6,
+        speed=1
     ).start()
     
 
